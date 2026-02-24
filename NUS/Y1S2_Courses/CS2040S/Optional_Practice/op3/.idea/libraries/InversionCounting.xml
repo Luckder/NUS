@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="InversionCounting">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/InversionCounting.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

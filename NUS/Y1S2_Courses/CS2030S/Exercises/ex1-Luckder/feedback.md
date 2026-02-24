@@ -1,4 +1,4 @@
-## Auto-generated Report for ex3
+## Auto-generated Report for ex1
 Your submitted code passed our test cases. 👍
 
 ### Output from Style Checker (checkstyle)

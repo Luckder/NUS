@@ -1,0 +1,22 @@
+1. B ✓
+2. B X X
+3. E X D
+4. X ✓
+5. E ✓
+6. A ✓
+7. C X E
+8a. CD ✓
+8b. AD ✓
+8c. It will not compile as BookNotFound is a subtype of BookOutOfStock, the compiler expects the exception type to be of BookNotFound or any subtype of it, which BookOutOfStock is not. So the line with throw new BookOutOfStock will cause the whole code to not compile.
+9a. It does not. BankAccount has the balance field public and not private, it can be found from outside the class.
+9b. It does not. The withdraw method in Main class is ASKING for the account balance, then using its own logic to decide if it is possible to withdraw instead of TELLING the BankAccount class to withdraw this amount from this account if possible. The logic handling should be inside BankAccount.
+9c. Add two new private fields labelled deposits and withdrawals, both primitive integer types. Modify the withdraw method to have the logic handling mentioned in my answer for previous question. Then add codes to both deposit and withdraw methods to increment by 1 to the respective fields.
+    Then add more methods like getDeposits and getWithdrawals to return the respective values. To get transactions in total, return the sum of deposits and withdrawals.
+    But if the values are to be used for something not currently mentioned, it would be better to omit the accessor methods and handle all calculations and logic within the BankAccount class through other methods.
+10. 112314 ✓
+11a. None ✓
+11b. S <: T ✓
+11c. T <: S ✓
+11d. None ✓
+11e. S <: T ✓
+11f. T <: S ✓

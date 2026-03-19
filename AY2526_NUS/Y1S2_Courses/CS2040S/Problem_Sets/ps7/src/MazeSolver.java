@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.LinkedList;
 
-public class MazeSolverDRAFT implements IMazeSolver {
+public class MazeSolver implements IMazeSolver {
 	private static final int NORTH = 0, SOUTH = 1, EAST = 2, WEST = 3;
 	private static int[][] DELTAS = new int[][] {
 		{ -1, 0 }, // North
@@ -79,7 +79,7 @@ public class MazeSolverDRAFT implements IMazeSolver {
 		}
 	}
 
-	public MazeSolverDRAFT() {
+	public MazeSolver() {
 		// TODO: Initialize variables.
 
 		// Blank
@@ -258,7 +258,7 @@ public class MazeSolverDRAFT implements IMazeSolver {
 
 		try {
 			//Maze maze = Maze.readMaze("maze-sample.txt");
-			Maze maze = MazeGenerator.generateMaze(50, 50, 0.9, System.currentTimeMillis());
+			Maze maze = MazeGenerator.generateMaze(50, 50, 0.8, System.currentTimeMillis());
 			IMazeSolver solver = new MazeSolver();
 			solver.initialize(maze);
 
@@ -266,7 +266,7 @@ public class MazeSolverDRAFT implements IMazeSolver {
 			//MazePrinter.printMaze(maze);
 			ImprovedMazePrinter.printMaze(maze, 0, 0);
 
-			for (int i = 0; i <= 9; ++i) {
+			for (int i = 0; i <= maze.getRows() * maze.getColumns(); ++i) {
 				System.out.println("Steps " + i + " Rooms: " + solver.numReachable(i));
 			}
 		} catch (Exception e) {
